@@ -1,4 +1,4 @@
-Blind Reader
+# Blind Reader
 
 Blind Reader is a hardware-software solution designed to assist visually impaired individuals by reading printed text aloud. It captures text using a camera, processes it with Microsoft Azure AI services, and converts it to speech using Text-to-Speech (TTS).
 
