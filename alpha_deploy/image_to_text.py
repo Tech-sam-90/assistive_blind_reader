@@ -11,10 +11,10 @@ try:
         api_key = credential["API_KEY"]
         endpoint = credential["ENDPOINT"]
 except FileNotFoundError:
-    print("❌ Missing credential.json file")
+    print("Missing credential.json file")
     exit()
 except KeyError as e:
-    print(f"❌ Missing key in credential.json: {e}")
+    print(f"Missing key in credential.json: {e}")
     exit()
 
 # Create client
@@ -26,7 +26,7 @@ client = ImageAnalysisClient(
 # Load image from local machine
 with open("./OCR/capture 1.png", "rb") as f:
     image_data = f.read()
-    print("✅ Image loaded successfully")
+    print("Image loaded successfully")
 
 # Call OCR
 result = client.analyze(
@@ -43,6 +43,6 @@ if result.read is not None:
             extracted_text += line.text
             print(line.text)
 else:
-    print("❌ No text detected")
+    print("No text detected")
 
 #To read out the text gotten
